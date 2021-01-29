@@ -35,7 +35,7 @@ matriz de confusao:
 Sem stemmer
 C=0.3
 Acuracia: 0.777777777778
-/Users/pedro.correia/Library/Python/2.7/lib/python/site-packages/sklearn/metrics/classification.py:1143: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+
   'precision', 'predicted', average, warn_for)
               precision    recall  f1-score   support
 
