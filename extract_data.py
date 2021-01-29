@@ -111,4 +111,4 @@ def read_pandas():
 
 
 get_reviews()
-read_pandas()
+#read_pandas()
