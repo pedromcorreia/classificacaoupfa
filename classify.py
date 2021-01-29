@@ -6,21 +6,22 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 
 file = "preclassificado.csv"
+file_test = "classificado.csv"
 Labels=['positivo', 'negativo']
 
 d = pd.read_csv(file)
+d_test = pd.read_csv(file_test)
 category = d['category']
 comments = d['text']
 
 df = pd.DataFrame(data=d)
+df_test = pd.DataFrame(data=d_test)
 
 #df.head()
 
 #print(df[['category', 'text']].values)
 #print(df)
 #print(category.count())
-
-
 
 #definicao do shape as categorias
 print(df.shape)
@@ -129,3 +130,8 @@ print("Acuracia: {}".format(accuracy_score(labels_test, y_predict)))
 print(classification_report(labels_test,y_predict))
 print('matriz de confusao:')
 print(confusion_matrix(labels_test, y_predict, labels=Labels))
+
+
+x_train = df['text'].values
+y_train = df['category'].values
+x_test = df_test['text'].values
